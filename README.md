@@ -103,5 +103,8 @@ createApp(App).use(router).mount('#app')
 可以看到，`vue2.*`和`vue3.0`关于路由定义的变化：
 1. 因为整个的`vue-router`库都变了，原来返回的是一个`class`现在返回的是一个集合，所以我们不能再通过`new vueRouter()`新建路由实例了，需要用`createRouter()`；
 > Vue Router is no longer a class but a set of functions. Instead of writing new Router(), you now have to call createRouter
-2. `vue3.0`无需使用`Vue.use(VueRouter)`,但是在主函数中使用的时候，需要在`use`实例;
+2. `vue3.0`无需使用`Vue.use(VueRouter)`,但是在主函数中使用的时候，需要在`use`实例;   
+
+####  **关于`this.$router`**
+路由实例子，由`createRouter`创建，可以全局通过`this.$router`读取
 
