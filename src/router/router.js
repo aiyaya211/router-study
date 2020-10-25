@@ -1,5 +1,6 @@
 import home from '../components/home.vue';
 import helloWorld from '../components/HelloWorld.vue';
+import user from '../components/user.vue'
 import { createRouter, createWebHashHistory } from 'vue-router';
 // import VueRouter from 'vue-router'
 
@@ -9,6 +10,8 @@ const routes = [{
     path: '/', component: home
 }, {
     path: '/hello', component: helloWorld
+}, {
+    path: '/user/:id', component: user
 }];
 
 // 创建router实例
