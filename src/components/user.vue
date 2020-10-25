@@ -1,5 +1,8 @@
 <template>
     <div>this is user {{$route.params.id}}</div>
+    <input type="text" placeholder="路由位置" v-model="mypath" />
+    <button @click="changeChildren">改变子路由</button>
+    <router-view></router-view>
 </template>
 <script>
 export default {
@@ -19,7 +22,15 @@ export default {
         console.log(`next: ${JSON.stringify(next)}`)
     },
     data() {
-        return {}
+        return {
+            mypath: ""
+        }
+    },
+    methods: {
+        changeChildren() {
+            console.log(this.$router)
+            this.$router.push({path: `/user/aiyaya/profile`});
+        }
     }
 }
 </script>
