@@ -108,3 +108,30 @@ createApp(App).use(router).mount('#app')
 ####  **关于`this.$router`**
 路由实例子，由`createRouter`创建，可以全局通过`this.$router`读取
 
+#### **路由所有路径匹配**
+```javascript
+// vue3.0
+const routes = [{ 
+    // 匹配所有
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound 
+}, {
+    // 匹配所有 user-*****
+    path: '/user-:afterUser(.*)', 
+    component: UserGeneric
+}];
+
+// vue2.*
+// 都是通过 * 通配符匹配
+const routes = [{ 
+    // 匹配所有
+    path: '/*',
+    name: 'NotFound',
+    component: NotFound 
+}, {
+    // 匹配所有 user-*****
+    path: '/user-*', 
+    component: UserGeneric
+}];
+```
