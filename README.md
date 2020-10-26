@@ -113,11 +113,13 @@ createApp(App).use(router).mount('#app')
 // vue3.0
 const routes = [{ 
     // 匹配所有
+    // 通过 `$route.params.pathMatch`获取参数
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: NotFound 
 }, {
     // 匹配所有 user-*****
+    // 通过 $route.params.afterUser 获取参数 所以前面的 afterUser 可以随便定义
     path: '/user-:afterUser(.*)', 
     component: UserGeneric
 }];
