@@ -29,7 +29,7 @@ export default {
     methods: {
         changeChildren() {
             console.log(this.$router)
-            this.$router.push({path: `/user/aiyaya/profile`});
+            this.$router.push({name: 'profile', path: `/user/aiyaya/profile`});
         }
     }
 }

@@ -15,7 +15,8 @@ const routes = [{
     path: '/hello', component: helloWorld
 }, {
     name: user,
-    path: '/user/:id', 
+    // 通过正则限定路由
+    path: '/user/:id(\\d+)', 
     component: user,
     children: [{
         name: 'profile',
