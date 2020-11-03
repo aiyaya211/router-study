@@ -16,10 +16,10 @@ const routes = [{
 }, {
     name: user,
     // 通过正则限定路由
-    path: '/user/:id(\\d+)', 
+    // path: '/user/:id(\\d+)',
+    path: '/user/:id', 
     component: user,
     children: [{
-        name: 'profile',
         path: 'profile',
         component: profile
     }]

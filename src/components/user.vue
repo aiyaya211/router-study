@@ -3,6 +3,7 @@
     <input type="text" placeholder="路由位置" v-model="mypath" />
     <button @click="changeChildren">改变子路由</button>
     <router-view></router-view>
+    <router-link to="/user/profile">路由跳转</router-link>
 </template>
 <script>
 export default {
