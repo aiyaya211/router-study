@@ -4,6 +4,7 @@ import user from '../components/user.vue';
 import profile from '../components/pages/userProfile.vue';
 import NotFound from '../components/base/NotFound.vue';
 import UserGeneric from '../components/pages/UserGeneric.vue';
+import userAny from  '../components/pages/userProfile.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 // import VueRouter from 'vue-router'
 
@@ -12,16 +13,20 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [{
     path: '/', component: home
 }, {
+    name: 'welcome',
     path: '/hello', component: helloWorld
 }, {
     name: user,
     // 通过正则限定路由
     // path: '/user/:id(\\d+)',
-    path: '/user/:id', 
+    path: '/user', 
     component: user,
     children: [{
         path: 'profile',
         component: profile
+    }, {
+        path: 'test',
+        component: userAny
     }]
 }, { 
     // 匹配所有

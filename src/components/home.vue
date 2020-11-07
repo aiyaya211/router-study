@@ -1,6 +1,6 @@
 <template>
     <div>This is home page</div>
-    <router-link to="/user/aiyaya">个人主页</router-link>
+    <router-link to="/user">个人主页</router-link>
 </template>
 <script>
 export default {
